@@ -195,7 +195,6 @@ hv-shoop/
 
 如有问题或建议，请通过以下方式联系：
 - 邮箱：[963968955@example.com]
-- GitHub：[your-github-username]
 
 ---
 
