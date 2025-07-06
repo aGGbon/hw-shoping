@@ -1,0 +1,278 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100%;
+}
+a{
+    text-decoration: none; 
+}
+.header{
+    position: relative;
+    background: #f1f1f1;
+    height: 48px;
+}
+.header .container{
+    position: absolute;
+    left: 10%;
+    height: 48px;
+    width: 80%;
+}
+.container>img{
+    height: 30px;
+    padding: 6px 6px;
+}
+/* 文字部分 */
+.header-title{
+    background: #ffffff;
+    height: 210px;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center;    /* 垂直居中 */
+    text-align: center;     /* 确保文本在 span 中居中 */
+    box-sizing: border-box; /* 确保 padding 和 border 不会超出宽度 */
+}
+.header-title>span{
+    font-size: 32px;
+    color: #191919;
+}
+/* 第三部分 */
+.box{
+    /* display: flex; */
+    position: relative;
+    width: 100%;
+    height: 425px;
+    background-color: #fff;
+    /* border: 1px solid red; */
+}
+.qrcode{
+    position: absolute;
+    left: 15%;
+    width: 360px;
+    height: 280px;
+    /* border: 1px solid pink; */
+}
+/* 二维码外面的框 */
+.qrcode-img{
+    display: flex;
+    justify-content: center;  /* 水平居中 */ 
+    align-items: center;    /*垂直居中 */
+    width: 200px;
+    height: 200px;
+    margin: 0px 80px;
+    background-color: #f7f7f7;
+    border-radius: 10px 10px 10px 10px;/* 圆角边框 */
+}
+.qrcode-img img{
+    width: 160px;
+    height: 160px;
+}
+.qrcode-bottem{
+    display: flex;
+    width: 360px;
+    height: 80px;
+}
+.qrcode-bottem span{
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    margin-top: auto; /* 将 span 推到底部 */
+}
+
+/* 中间竖线 */
+.Vertical{
+    position: absolute;
+    left: 45%;
+    width: 1px;
+    height: 350px;
+    background: rgba(0, 0, 0, 0.1);
+    margin: 0 60px;
+}
+
+/* 右侧部分 */
+.big-box-right{
+    position: absolute;
+    right: 15%;
+    width: 360px;
+    height: 250px;
+    /* border: 1px solid gold; */
+}
+.right {
+    position: relative;
+    /* display: grid; */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+
+    /* float: right; */
+    width: 360px;
+    height: 250px;
+    background-color: #fff;
+    /* border: 1px solid green; */
+}
+.right .info{
+    width: 100%;
+}
+.form-container{
+    width: 355px;
+    height: 125px;
+    /* border: 2px solid yellow; */
+}
+.form-container input {
+    margin-bottom: 10px;  /* 每个 input 下方的间距为 10px */
+    border: 0px;
+    caret-color: #2a92ff;
+}
+/* 鼠标点击input的时候 改变边框颜色 */
+input:focus {
+    outline: 2px solid #2a92ff;
+}
+.form-container .form-text{
+    width: 95%;
+    height: 48px;
+    padding: 0px 8px;
+    background-color:#f2f2f2;
+    border-radius: 10px 10px 10px 10px;/* 圆角边框 */
+}
+#pwd{
+    width: 95%;
+    height: 48px;
+    padding: 0px 8px;
+    background-color:#f2f2f2;
+    border-radius: 10px 10px 10px 10px;/* 圆角边框 */
+}
+.Captcha{
+    position: absolute;
+    top: 145px;
+}
+.Captcha span{
+    padding: 0px 5px;
+    color: #7bb5f4;
+}
+.Captcha span:hover{
+    color: #007dff;
+}
+.login{
+    position: absolute;
+    bottom: 0; /* 让这个在盒子的最下面 */
+    width: 95%;
+    height: 48px;
+}
+.login>button{
+    width: 100%;
+    height: 48px;
+    border-radius: 10px 10px 10px 10px;/* 圆角边框 */
+    border: 0px;
+    background-color:#ca141d;
+    color: #fff;
+    cursor: pointer; /*悬停变小手的属性*/
+}
+
+/* 注册，忘记密码，遇到问题 */
+.link{
+    position: absolute;
+    top: 252px;
+    right: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    /* 垂直居中（在这个例子中可能不需要，因为内容已经是单行） */
+    text-align: center;     
+    /* 确保链接内的文本居中（虽然对于 span 来说不是必需的） */
+    width: 360px;
+    height: 60px;
+    /* border: 1px solid blue; */
+}
+.link a{
+    margin: 0 10px;
+}
+.link a span {
+    display: inline-block;  /* 确保 span 元素是内联块级元素，以便应用 margin 等样式 */
+    color: #007dff;
+}
+.link a span:hover{
+    color: #004c9e;
+}
+/* 三个图标 */
+.box-icon{
+    position: absolute;
+    top: 314px;
+    right: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    /* 垂直居中（在这个例子中可能不需要，因为内容已经是单行） */
+    text-align: center;     
+    /* 确保链接内的文本居中（虽然对于 span 来说不是必需的） */
+    /* border: 1px solid yellowgreen; */
+    width: 360px;
+    height: 60px;
+}
+
+.box-icon a{
+    width: 40px;
+    line-height: 40px;
+    /* border: 1px solid yellowgreen; */
+    margin: 10px;
+}
+.box-icon i{
+    color: #bdbdbd;
+    font-size: 40px;
+    /* border: 1px solid red; */
+}
+/* 选择第一个 <a> 内的 <i> 元素 */
+.box-icon a:nth-child(1) i:hover {
+    color: #000;
+}
+/* 选择第二个 <a> 内的 <i> 元素 */
+.box-icon a:nth-child(2) i:hover {
+    color: #6b8ae9;
+}
+/* 选择第三个 <a> 内的 <i> 元素 */
+.box-icon a:nth-child(3) i:hover {
+    color: #6be96b;
+}
+
+/* 尾部 */
+.footer{
+    display: flex;
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 100px;
+}
+.footer .small-center{
+    width: 100%;
+    margin: 20px 0px;
+    /* border: 1px solid magenta; */
+}
+.container-top{
+    height: 30px;
+}
+.container-top>p{
+    text-align: center;
+}
+.container-top>p>a{
+    font-size: 14px;
+    color: #717171;
+    margin: 10px;
+}
+.container-top>p>a:hover{
+    color: #000;
+}
+.container-top>p>em{
+    font-size: 12.8px;
+    color: rgba(0, 0, 0, .1);
+    /* font-weight: 400; */
+    font-style: normal;
+}
+.container-bottom{
+    height: 30px;
+    
+}
+.container-bottom>p{
+    font-size: 13px;
+    text-align: center;
+    color: #a8a8a8;
+}

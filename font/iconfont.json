@@ -1,0 +1,100 @@
+{
+  "id": "4750268",
+  "name": "仿华为网站三级项目",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1287310",
+      "name": "图标_返回顶部",
+      "font_class": "tubiao_fanhuidingbu",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "1012783",
+      "name": "全部分类",
+      "font_class": "iconfontzhizuobiaozhun45",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "18375455",
+      "name": "注意",
+      "font_class": "zhuyi",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "77039",
+      "name": "我",
+      "font_class": "wo",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "10387462",
+      "name": "搜索框-搜索",
+      "font_class": "sousuokuang-sousuo",
+      "unicode": "e67c",
+      "unicode_decimal": 59004
+    },
+    {
+      "icon_id": "19449188",
+      "name": "购物车",
+      "font_class": "gouwuche",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "734314",
+      "name": "支付宝支付",
+      "font_class": "zhifubaozhifu",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "4937004",
+      "name": "QQ-circle-fill",
+      "font_class": "QQ-circle-fill",
+      "unicode": "e887",
+      "unicode_decimal": 59527
+    },
+    {
+      "icon_id": "22612675",
+      "name": "人工客服",
+      "font_class": "rengongkefu",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "1115081",
+      "name": "微博",
+      "font_class": "weibo",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "1188721",
+      "name": "微信",
+      "font_class": "weixin",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "18166606",
+      "name": "百度",
+      "font_class": "baidu",
+      "unicode": "e8cb",
+      "unicode_decimal": 59595
+    },
+    {
+      "icon_id": "36076294",
+      "name": "头条-copy",
+      "font_class": "toutiao",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    }
+  ]
+}

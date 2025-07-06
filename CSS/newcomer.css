@@ -1,0 +1,429 @@
+*{
+    /* box-sizing: border-box; */
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none; /* 去掉下划线 */
+}
+ul{
+    list-style: none;/* 列表去掉格式 */
+}
+body{
+    background: #F1F3F5;
+}
+.header-top{
+    display: flex;/* 弹性布局 */
+    justify-content: space-between;/* 两端对齐 */
+    align-items: center; /* 垂直居中 */
+    background-color: black;
+    width: 80%;
+    padding: 8px 10%;  /* 内边距 */
+}
+
+.header-top a{
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    display: inline-block;/*  允许在元素上设置宽度和高度。  
+                            因为a标签是行内元素，设置高度是不生效的 */
+    height: 10px;
+    line-height: 10px;
+    padding-right: 5px;/* 设置了线--距离右侧内边距 */
+    /* 第一种加竖线方式  */
+    border-right: 1px solid rgba(255, 255, 255, 0.3);/* 边框宽度 格式 颜色 */
+}
+/* 第一种竖线，最后一个线清除掉  */
+.ht-left a:last-child, .ht-right a:last-child{
+    border-right: 0;
+}
+/* 第二种加中间的竖线*/
+/* .ht-left a+a{ a+a表示连个相连的标签 
+    padding-right: 5px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+} */
+ .header-top a:hover{
+    color: #fff;
+ }
+.header-menu{
+    display: flex;
+    align-items: center;/* 垂直居中 */
+    justify-content: space-between;/* 两端对齐 */
+    /* position: relative; */
+    width: 80%;
+    padding: 8px 10%;
+    background-color: #fff;
+    /* border: 1px solid sandybrown; */
+    position: sticky; /* 粘性布局 */
+    top: 0;          /* 顶部对齐 */
+    left: 0;         /* 左侧对齐 */
+    z-index: 99;   /* 确保在其他内容之上 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.logo img{
+    height: 74px;
+}
+.header-menu-list{
+    position: absolute;
+    left: 200px;
+    margin-left: 80px;/* 左侧外边距 */
+    /* border: 1px solid sandybrown; */
+}
+/* .header-menu-list>div{
+    width: 940px;
+} */
+.header-menu-list a{
+    margin-right: 30px;
+    color: #000;
+}
+.header-menu-list a:hover{
+    color: #ff0000;
+}
+/* 右侧图标 */
+/* .header-menu-right {
+    border: 1px solid sandybrown;
+} */
+.header-menu-right a{
+    color: #a3a3a3;
+}
+.header-menu-right a:hover{
+    color: #4e4e4e;
+}
+.header-menu-right>div>a>i{
+    font-size: 26px;
+}
+
+/* 新人优惠图片 */
+.img-info{
+    width: 100%;
+    height: 100%;
+}
+.img-info .img-xinren{
+    width: 100%;
+    height: 430px;
+}
+
+/* 用券专区 */
+.Coupons{
+    width: 80%;
+    margin: 20px auto;
+    height: 136px;
+    /* border: 1px solid goldenrod; */
+}
+.Coupons .Coupons-region{
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+ /* 一个info  一个right */
+.Coupons .Coupons-info{
+    position: relative; /* 设置相对定位，作为小盒子的定位上下文 */
+    height: 72px;
+    width: 100%;
+    /* border: 1px solid palegreen; */
+}
+.Coupons-info>img{
+    width: 100%;
+}
+/* .img-right{
+    height: 100%;
+    width: 20%;
+    border: 1px solid pink;
+    z-index: 1;
+} */
+.Coupons-info .img-right{
+    position: absolute; /* 设置绝对定位 */
+    right: 0; /* 将小盒子定位到大盒子的最右侧 */
+    top: 0; /* 将小盒子定位到大盒子的顶部 */
+    width: 205px; /* 小盒子的宽度，可以调整 */
+    height: 100%; /* 小盒子的高度设置为大盒子的100% */
+    /* border: 1px solid pink; */
+ }
+.Coupons-info .img-right a{
+    display: block; /* 将a标签设置为块级元素，以便它可以充满小盒子 */
+    width: 100%; /* a标签的宽度设置为小盒子的100% */
+    height: 100%; /* a标签的高度设置为小盒子的100% */
+}
+.Coupons-info .img-right a:hover{
+    background-color: rgba(198, 198, 198, 0.3);
+}
+
+/* 用券专区 三个商品 */
+/* box-commodity  container-top、bottom    commodity-list */
+.box-commodity{
+    /* height: 250px; */
+    width: 80%;
+    margin: 20px auto;
+    background-color: #f1f3f5;
+    /* border: 1px solid red; */
+}
+.box-commodity .container-top{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    /* border: 1px solid rgb(109, 108, 108); */
+}
+
+.commodity-list{
+    width: 20%;
+    background-color: #fff;
+    text-align: center;
+    /* border: 1px solid red; */
+    height: 310px;
+    margin-right: 10px;
+}
+/* 边框显示阴影效果 */
+.commodity-list:hover{
+    box-shadow: 0px 0px 20px rgb(199, 203, 207);/* x 偏移量 | y 偏移量 | 阴影模糊半径 | 阴影颜色 */
+}
+
+.commodity-list>a>div{
+    height: 220px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.commodity-list>a>div>img{
+    height: 180px;
+    object-fit: cover;
+}
+
+.commodity-list>a>h4{
+    font-size: 13px;
+    font-weight: 400;   
+    color: #000;
+}
+.commodity-list p{
+    color: rgb(195, 195, 195);
+    font-size: 12px;
+    margin: 10px 0px;
+}
+.commodity-list b{
+    font-size: 14px;
+    color: #000;
+}
+
+.container-bottom{
+    margin: 10px 0;
+}
+.container-bottom p{
+    text-align: center;
+    color: #000;
+}
+.container-bottom p:hover{
+    color: red;
+}
+
+/* 一元专区 */
+/* 外面大盒子 */
+.container{
+    height: 300px;
+    width: 80%;
+    margin: 0 auto;
+    /* border: 1px solid palevioletred; */
+    /* background-color: #f1f3f5; */
+}
+/* 文字：一元专区 */
+.container .container-top{
+    height: 50px;
+    /* border: 1px solid rgb(219, 44, 102); */
+    text-align: center;
+}
+.container-top>h4{
+    font-size: 24px;
+    color: #000;
+}
+/* 左图右文盒子 */
+.container-list{
+    display: flex;
+    margin-top: 20px;
+    /* border: 1px solid lawngreen; */
+    justify-content: space-between; /* 水平排列并且保证小盒子两侧靠近大盒子两侧 */
+}
+/* 左图右文*/
+.container-list a{
+    display: flex;
+    /* flex-wrap: nowrap; */
+    width: 32.5%;
+    height: 180px;
+    background-color: #fff;
+    /* border: 1px solid green; */
+}
+.list-left{
+    float: left;
+    width: 45%;
+    height: 100%;
+    /* border: 1px solid lawngreen; */
+}
+.list-left>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list-left>div>img{
+    height: 180px;
+    object-fit: cover;
+}
+
+
+
+/* 右侧文字 */
+.list-right{
+    float: left;
+    width: 55%;
+    height: 100%;
+    /* border: 1px solid rgb(61, 66, 216); */
+}
+.list-right .right-top{
+    /* border: 1px solid rgb(216, 61, 177); */
+    margin: 20px 10px 10px;
+}
+.list-right .right-top>p{
+    font-size: 21px;
+    color: #000;
+    text-overflow: ellipsis;/* 文字溢出 ellipsis是省略号*/
+    overflow: hidden;
+    white-space: nowrap; /*文字不换行 */
+    /* border: 1px solid red; */
+}
+.list-right>div{
+    margin: 0px 10px;
+}
+.list-right>div>p{
+    font-size: 14px;
+    color: #aeaeae;
+}
+.list-right .right-bottom{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid peru; */
+    margin-top: 60px;
+}
+.list-right .right-bottom .bottom-right{
+    /* display: flex; */
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+}
+.container-list a:hover{
+    box-shadow: 0px 0px 20px rgb(199, 203, 207);
+}
+
+
+/* 其他的产品盒子和效果 */
+.productB{
+    width: 80%;
+    margin: 20px auto;
+    /* border: 1px solid rgb(30, 220, 53); */
+}
+.productB-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;/* 对齐方式，让左右盒子靠在大盒子上 */
+    /* border: 1px solid red; */
+    margin: 10px 0px 0px;
+}
+.pb-list-B{
+    width: 19%;
+    background-color: #fff;
+    text-align: center;
+    /* border: 1px solid rgb(35, 97, 221); */
+    height: 310px;
+    margin: 0px 0px 20px;
+}
+.pb-list-B:hover{
+    box-shadow: 0px 0px 20px rgb(199, 203, 207);
+}
+.productB-title h3{
+    font-size: 24px;
+    color: #000;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.pb-list-B>a>img{
+    max-width: 90%;
+    height: 200px;
+    object-fit: cover;
+    /* border: 1px solid red; */
+}
+.pb-list-B>a>h4{
+    font-size: 13px;
+    font-weight: 400;   
+    color: #000;
+}
+.pb-list-B p{
+    color: rgb(195, 195, 195);
+    font-size: 12px;
+    margin: 10px 0px;
+}
+.pb-list-B b{
+    font-size: 14px;
+    color: #000;
+}
+.pb-list-B del{
+    font-size: 12px;
+    color: #585858;
+}
+
+/* 下面更多 */
+.list-button{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center; /* 主轴方向(x轴方向) */
+    align-items: center;  /* 侧轴方向(y轴方向)  */
+    /* border: 1px solid red; */
+}
+.list-button div{
+    line-height: 20px;
+    color: #000;
+    display: flex;
+    float: left;
+}
+.list-button div p{
+    font-size: 12px;
+}
+.list-button img{
+    width: 15px;
+    line-height: 15px;
+}
+
+/* 底部 */
+.new-fotter{
+    width: 80%;
+    margin: 20px auto;
+    height: 65px;
+}
+.new-fotter img{
+    width: 100%;
+    height: 65px;
+}
+
+
+/* 返回顶部 */
+#toTop{
+    width: 70px;
+    height: 70px;
+    background: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 30px;
+    position: fixed; /*使用固定定位*/
+    bottom: 50px;
+    right: 50px;
+    z-index: 99999;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #c5c6c7;
+}
+.toTop-smallbox{
+    margin-top: 5px;
+    color: #989898;
+    cursor: pointer;
+}
+.toTop-smallbox:hover{
+    color: red;
+}
+.toTop-top span{
+    font-size: 20px;
+}

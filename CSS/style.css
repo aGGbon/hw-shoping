@@ -1,0 +1,710 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none; /* 去掉下划线 */
+}
+ul{
+    list-style: none;/* 列表去掉格式 */
+}
+body{
+    background: #F1F3F5;
+}
+.header-top{
+    display: flex;/* 弹性布局 */
+    justify-content: space-between;/* 两端对齐 */
+    align-items: center; /* 垂直居中 */
+    background-color: black;
+    width: 80%;
+    padding: 8px 10%;  /* 内边距 */
+}
+
+.header-top a{
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    display: inline-block;/*  允许在元素上设置宽度和高度。  
+                            因为a标签是行内元素，设置高度是不生效的 */
+    height: 10px;
+    line-height: 10px;
+    padding-right: 5px;/* 设置了线--距离右侧内边距 */
+    /* 第一种加竖线方式  */
+    border-right: 1px solid rgba(255, 255, 255, 0.3);/* 边框宽度 格式 颜色 */
+}
+/* 第一种竖线，最后一个线清除掉  */
+.ht-left a:last-child, .ht-right a:last-child{
+    border-right: 0;
+}
+/* 第二种加中间的竖线*/
+/* .ht-left a+a{ a+a表示连个相连的标签 
+    padding-right: 5px;
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
+} */
+ .header-top a:hover{
+    color: #fff;
+ }
+.header-menu{
+    display: flex;
+    align-items: center;/* 垂直居中 */
+    width: 80%;
+    padding: 8px 10%;
+    background-color: #fff;
+    position: sticky; /* 粘性布局 */
+    top: 0;          /* 顶部对齐 */
+    left: 0;         /* 左侧对齐 */
+    z-index: 99;   /* 确保在其他内容之上 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+/* 搜索框部分 */
+.header-menu>a{
+    position: absolute;
+    width: 30px;
+    line-height: 30px;
+    right: 150px;
+    color: #b3b3b3;
+}
+.header-menu>a>i{
+    width: 100%;
+}
+.header-menu>a:hover{
+    color: #000;
+}
+.logo img{
+    height: 74px;
+}
+
+.searchBar{
+    width: 30px;
+    height: 30px;
+    background-color: #f2f2f2;
+    /* border: 1px solid red; */
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;/* 如果里面textInput大，用这个隐藏右侧两个尖角 */
+    transition: .5s;
+}
+.changeWidth{
+    width: 400px;
+}
+.searchBar .icon{
+    width: 30px;
+    height: 30px;
+    /* background-color: #000000; */
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;/* 小手图标 */
+    
+}
+.textInput{
+    width: 360px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    /* border: 1px solid green; */
+}
+.textInput input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;/* 点击时候里面边框没有 */
+    background-color: #f2f2f2;
+}
+/* 清除功能 */
+.clear{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 22%;
+    top: 50%;
+    transform: translateY(-50%);/* 向上走自身高度的50% */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clear::before{
+    content: '';
+    width: 1px;
+    height: 15px;
+    background-color: #999;
+    transform: rotate(45deg);
+    position: absolute;
+}
+.clear::after{
+    content: '';
+    width: 1px;
+    height: 15px;
+    background-color: #999;
+    transform: rotate(315deg);
+}
+/* go按钮 */
+#go{
+    width: 12%;
+    height: 60%;
+    position: absolute;
+    top: 20%;
+    right: 15px;
+    border-radius: 8px;
+    color: #000;
+    box-shadow: 0 0 2px rgba(0,0,0,.4);
+    /* background: linear-gradient(rgb(215, 232, 239),rgb(147, 160, 164)); */
+    /* 渐变 */
+    background-color: #ffffff;
+}
+#go:hover{
+    cursor: pointer;
+    background: #c5c6c7;
+}
+
+
+/* 左侧列表部分 */
+.header-menu-list{
+    margin-left: 80px;/* 左侧外边距 */
+}
+.header-menu-list a{
+    margin-right: 30px;
+    color: #000;
+}
+.header-menu-list a:hover{
+    color: #ff0000;
+}
+
+/* 左侧引导栏 */
+.banner {
+    position: relative;
+}
+.banner-nav{
+    position: absolute;
+    top: 30px;
+    left: 10%;
+    background: rgba(255, 255, 255, 1);
+    width: 160px;
+    z-index: 2;
+    padding: 10px 20px;/* 内边距 */
+}
+.banner-nav a{
+    display: flex;/* 弹性布局 */
+    align-items: center;/* 垂直居中 */
+    justify-content: space-between;/* 两端对齐 */
+    background: #fff;
+    height: 40px;
+    /* border-bottom: 1px solid #000;为了看清辅助线 */
+    font-size: 14px;
+    color: #595959;
+}
+
+/* 左侧导航，箭头大小 */
+.banner-nav-right{
+    width: 20px;
+    height: 20px;
+}
+
+/* banner滑动时候的列表   w496 470*/
+/* sub-cate滑动轮 */
+/* 蓝色字体不能删除，删除会出错 */
+banner-nav外面大盒子  fir-cate父级 sub-cate子级
+.fir-cate{
+    position: absolute;
+}
+/* 隐藏所有系列图片大小 */
+.fir-cate ul li img{
+    margin-right: 12px;
+    width: 50px;
+    height: 50px;
+}
+.sub-cate{
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 90%;
+    width: 500px;
+    height: 500px;
+    background-color: #fff;
+    /* border: 1px solid #e0e0e0; */
+    border-left: none;
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, .18); */
+}
+/* 鼠标悬停到li上，出现图片 */
+.fir-cate>li:hover .sub-cate{
+    display: block;
+}
+
+/* 里面两列，每列250 */
+.sub-cate>ul{
+    width: 250px;
+    float: left;/* 因为是块级元素，所以撑开 */
+}
+.sub-cate li{
+    width: 100%;
+    height: 100px;
+    padding: 20px 80px 20px 10px;
+    box-sizing: border-box;
+    /* 当设置这个值时，元素的width和height包括内容、内边距和边框的宽度，但不包括外边距 */
+    /* background-color: pink; */
+}
+
+
+/* 文字大小 */
+.title{
+    font-size: 15px;
+}
+/* 鼠标悬停变颜色 */
+.sub-cate li:hover .title{
+    color: red;
+}
+
+
+/* .sub-cate a {
+    width: 20%;
+    height: 72px;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.sub-cate title{
+    width: 20%;
+}
+.sub-cate a img {
+    width: 100%;
+    height: auto;
+} */
+/* .sub-cat{
+    position: absolute;
+    top: 0px;
+    left: 100%;
+    width:490px;
+    height:490px;
+    display: none;
+}
+.sub-2{
+    position: absolute;
+    top: 0px;
+    left: 100%;
+    width:490px;
+    height:490px;
+    display: none;
+}
+.fir-cate:hover .sub-cat{
+    width:300px;
+    height: 500px;
+    display: block;
+}
+.fir-cate:hover .sub-2{
+    width:300px;
+    height: 500px;
+    display: block;
+} */
+
+
+
+
+/* 下面是轮播图大小和祥子 */
+.banner .swiper img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;/* 	调整被替换内容的大小，以在填充元素的整个内容框时保持其长宽比。*/
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 快速导航部分 */
+.home-nav{
+    display: flex;/* 弹性布局 */
+    flex-wrap: wrap;/* 弹性布局换行 */
+    justify-content: space-between;/* 两端对齐 */
+    width: 80%;
+    margin: 50px auto;
+
+}
+.home-nav a{
+    width: 10%;
+    margin: 10px 2.5%;
+    text-align: center;
+}
+.home-nav a img{
+    width: 50%;
+}
+.home-nav a p{
+    font-size: 13px;
+    color: #000;
+}
+/* 快速导航，放大效果 */
+.home-nav a:hover img{
+    transform: scale(1.1);
+}
+.home-nav a:hover p{
+    font-weight: bold;
+}
+/* 新人区域 */
+.index-new {
+    display: flex;
+    justify-content: center; /* 可以用于进一步居中 */
+    align-items: center; 
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    margin-bottom: 25px;
+}
+.index-new .container{
+    display: flex;/* 弹性布局 */
+    max-width: 80%;/* 图片宽度不超过小盒子的宽度 */
+    max-height: 100%; /*图片高度不超过小盒子的高度 */
+    overflow: hidden;/*确保图片不会超出小盒子的边界 */
+    object-fit: contain; 
+    /* background-color: yellow; */
+}
+/*  */
+.index-new .container:hover{
+    box-shadow: 0px 0px 20px rgb(199, 203, 207);
+}
+.index-new .container img{
+    width: 100%;
+}
+
+
+/* 商品区域 */
+.product{
+    width: 80%;
+    margin: 20px auto;
+}
+.product-box{
+    display: flex;
+    flex-wrap: wrap;/* 项目溢出容器边界，它们将被打断到多个行中 */
+    justify-content: space-between;/*设置弹性容器中项目的对齐方式  */
+}
+.pb-list{
+    width: 24%;
+    background-color: #fff;
+    text-align: center;
+    /* border: 1px solid red; */
+    height: 310px;
+}
+/* 边框显示阴影效果 */
+.pb-list:hover{
+    box-shadow: 0px 0px 20px rgb(199, 203, 207);/* x 偏移量 | y 偏移量 | 阴影模糊半径 | 阴影颜色 */
+}
+.product-title h3{
+    font-size: 24px;
+    color: #000;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.pb-list>a>img{
+    max-width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.pb-list>a>h4{
+    font-size: 13px;
+    font-weight: 400;   
+    color: #000;
+}
+.pb-list p{
+    color: rgb(195, 195, 195);
+    font-size: 12px;
+    margin: 10px 0px;
+}
+.pb-list b{
+    font-size: 14px;
+    color: #000;
+}
+
+/* 其他的产品盒子和效果 */
+.productB{
+    width: 80%;
+    margin: 20px auto;
+    /* border: 1px solid rgb(30, 220, 53); */
+}
+.productB-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    margin: 10px 0px;
+}
+.pb-list-B{
+    width: 24%;
+    background-color: #fff;
+    text-align: center;
+    /* border: 1px solid rgb(35, 97, 221); */
+    height: 310px;
+    margin: 0px 0px 20px;
+}
+.pb-list-B:hover{
+    box-shadow: 0px 0px 20px rgb(199, 203, 207);
+}
+.productB-title h3{
+    font-size: 24px;
+    color: #000;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.pb-list-B>a>img{
+    max-width: 90%;
+    height: 200px;
+    object-fit: cover;
+    /* border: 1px solid red; */
+}
+.pb-list-B>a>h4{
+    font-size: 13px;
+    font-weight: 400;   
+    color: #000;
+}
+.pb-list-B p{
+    color: rgb(195, 195, 195);
+    font-size: 12px;
+    margin: 10px 0px;
+}
+.pb-list-B b{
+    font-size: 14px;
+    color: #000;
+}
+
+
+/* 页尾部分 */
+/* 页脚开始 */
+.footer{
+    background-color: #fff;
+    /* border: 1px solid red; */
+}
+/* .footer .container{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    max-width: 80%;
+    max-height: 100%; 
+    overflow: hidden;
+} */
+.footer-server{ 
+    position: relative;
+    left: 10%;
+    width: 80%;
+    height: 45px;
+    padding: 24px 35px 6px 56px;
+    /* border: 1px solid pink; */
+    /* background-color: #fff; */
+}
+.footer-server ul{
+    width: 100%;
+    display: flex;
+}
+.footer-server li{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    width: calc((100%-80px)/5);
+    margin-right: 20px;
+    /* float: left;
+    width: 20%; */
+}
+.footer-server a{
+    color: #000;
+}
+.footer-server img{
+    float: left;
+    width: 24px;
+    margin-right: 16px;
+}
+
+
+/* 第二块 */
+.footer-links{
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    left: 10%;
+    height: 200px;
+    width: 75%;
+    padding: 56px 40px;
+    border: 0.8px solid rgba(218, 215, 215, 0.858);
+    border-left: none;
+    border-right: none;
+    background-color: #fff;
+    /* border: 1px solid rgb(229, 51, 80); */
+}
+.footer-links>ul{
+    /* position: relative; */
+    float: left;
+    /* left: 10%; */
+    width: 143px;
+    text-align-last: left;
+    color: #000;
+    font-size: 14px;
+    /* border: 1px solid pink; */
+}
+.footer-links li a{
+    color: #757575;
+    font-size: 12px;
+}
+.footer-links li a:hover{
+    color: red;
+}
+.footer-links li{
+    margin-top: 10px;
+}
+.footer-links li:first-child{
+    line-height: 17px;
+    margin: 0px 0px 32px;
+}
+/* 右侧练习售后部分 */
+.contact{
+    float: left;
+    width: 200px;
+    height: 134px;
+    /* background-color: red; */
+    border-left: 1px solid #757575;
+    /* border: 1px solid pink; */
+    padding: 20px;
+}
+
+.Rounded-corners{
+    /* display: flex; */
+    width: 200px;
+    height: 50px;
+    background-color: #000;
+    /* 设置圆角 */
+    border-radius: 25px;
+    /* 文字水平居中 */
+    text-align: center;
+    /* 文字垂直居中 */
+    line-height: 50px;
+}
+.Rounded-corners:hover{
+    background-color: #747474;
+}
+.Rounded-corners i{
+    color: #fff;
+    /* font-size: 24px; */
+}
+.tel{
+    font-size: 24px;
+    text-align: center;
+    line-height: 1;
+    color: #000;
+    margin-bottom: 2px;
+}
+.time{
+    font-size: 12px;
+    line-height: 19px;
+    text-align: center;
+    color: #000;
+    margin-bottom: 5px;
+}
+/* 关注部分文字 */
+.concern{
+    position: relative;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px 0px;
+    color: #333;
+}
+.concern-VMALL .concern a{
+    color: #000;
+}
+.concern-VMALL .concern a:hover{
+    color: #747474;
+}
+.wx-img{
+    display: none;/* 默认隐藏 */
+    position: absolute;
+    top: 30px;
+    left: 70px;
+    width: 80px;
+}
+/* 挪动到微信上，出现二维码 */
+.icon-weixin:hover+.wx-img{
+    display: block;
+}
+
+/* 第三块部分 */
+.footer-info{
+    position: relative;
+    left: 10%;
+    width: 85%;
+    height: 120px;
+    margin-top: 30px;
+    /* padding: 33px 0px 40px; */
+    background-color: #fff;
+    /* border: 1px solid pink; */
+}
+.footer-info .info img{
+    width: 50px;
+    height: 30px;
+    margin-right: 60px;
+}
+.info>img,.info-fl{
+    float: left;
+}
+.info-fl{
+    width: 820px;
+    text-align: left;
+    font-size: 12px;
+    line-height: 18px;
+}
+.info-fl a{
+    border-right: 1px solid #757575;
+    padding: 2px;
+}
+.info-fl>p{
+    color: #757575;
+}
+.info-fl>p:first-child>a{
+    color: #000;
+}
+.info-fl>p:nth-child(2)>a{
+    color: #757575;
+}
+.info-fl>p>a:hover{
+    color: red;
+}
+/* 右侧电子营业执照 */
+.img-right{
+    float: left;
+}
+
+.img-right img{
+    width: 100px;
+    margin-left: 60px;
+}
+
+
+/* 返回顶部 */
+#toTop{
+    width: 70px;
+    height: 70px;
+    background: rgb(255, 255, 255);
+    text-align: center;
+    line-height: 30px;
+    position: fixed; /*使用固定定位*/
+    bottom: 50px;
+    right: 50px;
+    z-index: 99999;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #c5c6c7;
+}
+.toTop-smallbox{
+    margin-top: 5px;
+    color: #989898;
+    cursor: pointer;
+}
+.toTop-smallbox:hover{
+    color: red;
+}
+.toTop-top span{
+    font-size: 20px;
+}
+
+
+
+

@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品详情 - 华为商城</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/product-detail.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+</head>
+<body>
+    <!--顶部  -->
+    <header>
+        <div class="header">
+            <!-- 顶部黑色部分 -->
+            <div class="header-top">
+                <!-- 左侧部分 -->
+                <div class="ht-left">
+                    <a href="index.html">首页</a>
+                    <a href="#">消费者业务网站</a>
+                    <a href="#">优购码</a>
+                    <a href="#">企业商用</a>
+                    <a href="#">Select Region</a>
+                    <a href="#">更多精彩</a>
+                </div>
+                <!-- 右侧部分 -->
+                <div class="ht-right">
+                    <a href="login.html" target="_blank">请登录</a>
+                    <a href="logon.html" target="_blank">注册</a>
+                    <a href="#">我的订单</a>
+                    <a href="#">联系客服</a>
+                    <a href="#">网站导航</a>
+                    <a href="#">手机版</a>
+                    <a href="cart.html">购物车</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 下面菜单栏 -->
+    <div class="header-menu">
+        <div class="logo">
+            <img src="img/logo_app.svg" alt="">
+        </div>
+        <div class="header-menu-list">
+            <a href="#">华为</a>
+            <a href="#">鸿蒙智行</a>
+            <a href="#">华为智选</a>
+            <a href="#">生态周边</a>
+        </div>
+        
+        <!-- 搜索框 -->
+        <div class="searchBar">
+            <div class="icon">
+                <i class="iconfont icon-sousuokuang-sousuo"></i>
+            </div>
+            <div class="textInput">
+                <input type="text" placeholder="搜索商品">
+                <input type="submit" value="go" id="go">
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- 面包屑导航 -->
+        <div class="breadcrumb">
+            <div class="container">
+                <a href="index.html">首页</a> > 
+                <a href="products.html">产品列表</a> > 
+                <span id="product-name">产品详情</span>
+            </div>
+        </div>
+
+        <!-- 产品详情区域 -->
+        <div class="product-detail">
+            <div class="container">
+                <!-- 左侧产品图片 -->
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img id="main-image" src="img/1-PURA.png" alt="产品图片">
+                    </div>
+                    <div class="thumbnail-list">
+                        <div class="thumbnail active" data-src="img/1-PURA.png">
+                            <img src="img/1-PURA.png" alt="">
+                        </div>
+                        <div class="thumbnail" data-src="img/1-MATE.png">
+                            <img src="img/1-MATE.png" alt="">
+                        </div>
+                        <div class="thumbnail" data-src="img/1-POCKET.png">
+                            <img src="img/1-POCKET.png" alt="">
+                        </div>
+                        <div class="thumbnail" data-src="img/MatePad Pro 系列.webp">
+                            <img src="img/MatePad Pro 系列.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右侧产品信息 -->
+                <div class="product-info">
+                    <h1 id="product-title">HUAWEI Pura 70</h1>
+                    <div class="product-subtitle">超高速风驰闪拍 | 第二代昆仑玻璃</div>
+                    
+                    <div class="price-section">
+                        <div class="current-price">
+                            <span class="price-symbol">￥</span>
+                            <span class="price-value" id="product-price">4999</span>
+                            <span class="price-unit">起</span>
+                        </div>
+                        <div class="original-price">
+                            <span class="price-symbol">￥</span>
+                            <span class="price-value">5999</span>
+                        </div>
+                    </div>
+
+                    <!-- 产品规格选择 -->
+                    <div class="product-options">
+                        <div class="option-group">
+                            <h3>颜色</h3>
+                            <div class="option-list">
+                                <div class="option-item active" data-value="雅川青">
+                                    <span class="option-name">雅川青</span>
+                                </div>
+                                <div class="option-item" data-value="雪域白">
+                                    <span class="option-name">雪域白</span>
+                                </div>
+                                <div class="option-item" data-value="曜金黑">
+                                    <span class="option-name">曜金黑</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="option-group">
+                            <h3>存储</h3>
+                            <div class="option-list">
+                                <div class="option-item active" data-value="256GB">
+                                    <span class="option-name">256GB</span>
+                                </div>
+                                <div class="option-item" data-value="512GB">
+                                    <span class="option-name">512GB</span>
+                                </div>
+                                <div class="option-item" data-value="1TB">
+                                    <span class="option-name">1TB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 购买按钮 -->
+                    <div class="purchase-actions">
+                        <div class="quantity-selector">
+                            <button class="quantity-btn minus">-</button>
+                            <input type="number" value="1" min="1" max="99" class="quantity-input">
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button class="btn-primary" id="add-to-cart">
+                                <i class="iconfont icon-gouwuche"></i>
+                                加入购物车
+                            </button>
+                            <button class="btn-secondary" id="buy-now">
+                                立即购买
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- 服务保障 -->
+                    <div class="service-guarantee">
+                        <div class="guarantee-item">
+                            <i class="iconfont icon-baozhang"></i>
+                            <span>官方正品</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="iconfont icon-tuihuo"></i>
+                            <span>7天退货</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="iconfont icon-shouhou"></i>
+                            <span>全国联保</span>
+                        </div>
+                        <div class="guarantee-item">
+                            <i class="iconfont icon-yunshu"></i>
+                            <span>免费配送</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 产品详细信息 -->
+        <div class="product-details">
+            <div class="container">
+                <div class="detail-tabs">
+                    <div class="tab-header">
+                        <div class="tab-item active" data-tab="specs">规格参数</div>
+                        <div class="tab-item" data-tab="features">产品特色</div>
+                        <div class="tab-item" data-tab="reviews">用户评价</div>
+                    </div>
+                    
+                    <div class="tab-content">
+                        <div class="tab-panel active" id="specs">
+                            <div class="specs-table">
+                                <div class="spec-row">
+                                    <div class="spec-label">屏幕</div>
+                                    <div class="spec-value">6.6英寸 OLED 曲面屏</div>
+                                </div>
+                                <div class="spec-row">
+                                    <div class="spec-label">处理器</div>
+                                    <div class="spec-value">麒麟9000S</div>
+                                </div>
+                                <div class="spec-row">
+                                    <div class="spec-label">存储</div>
+                                    <div class="spec-value">256GB/512GB/1TB</div>
+                                </div>
+                                <div class="spec-row">
+                                    <div class="spec-label">摄像头</div>
+                                    <div class="spec-value">5000万像素主摄 + 1300万像素超广角 + 1200万像素长焦</div>
+                                </div>
+                                <div class="spec-row">
+                                    <div class="spec-label">电池</div>
+                                    <div class="spec-value">4750mAh</div>
+                                </div>
+                                <div class="spec-row">
+                                    <div class="spec-label">充电</div>
+                                    <div class="spec-value">88W有线快充 + 50W无线快充</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-panel" id="features">
+                            <div class="features-list">
+                                <div class="feature-item">
+                                    <h3>超高速风驰闪拍</h3>
+                                    <p>采用全新影像系统，支持超高速连拍，捕捉每一个精彩瞬间。</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h3>第二代昆仑玻璃</h3>
+                                    <p>采用第二代昆仑玻璃，抗跌落能力提升1倍，更加坚固耐用。</p>
+                                </div>
+                                <div class="feature-item">
+                                    <h3>卫星通信</h3>
+                                    <p>支持北斗卫星消息，在无网络环境下也能发送紧急消息。</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tab-panel" id="reviews">
+                            <div class="reviews-section">
+                                <div class="review-item">
+                                    <div class="review-header">
+                                        <div class="user-info">
+                                            <span class="username">用户***123</span>
+                                            <div class="rating">
+                                                <i class="iconfont icon-xingxing"></i>
+                                                <i class="iconfont icon-xingxing"></i>
+                                                <i class="iconfont icon-xingxing"></i>
+                                                <i class="iconfont icon-xingxing"></i>
+                                                <i class="iconfont icon-xingxing"></i>
+                                            </div>
+                                        </div>
+                                        <div class="review-date">2024-01-15</div>
+                                    </div>
+                                    <div class="review-content">
+                                        手机外观很漂亮，拍照效果很好，系统流畅，值得推荐！
+                                    </div>
+                                </div>
+                                
+                                <div class="review-item">
+                                    <div class="review-header">
+                                        <div class="user-info">
+                                            <span class="username">用户***456</span>
+                                            <div class="rating">
+                                                <i class="iconfont icon-xingxing"></i>
+                                                <i class="iconfont icon-xingxing"></i>
+                                                <i class="iconfont icon-xingxing"></i>
+                                                <i class="iconfont icon-xingxing"></i>
+                                                <i class="iconfont icon-xingxing"></i>
+                                            </div>
+                                        </div>
+                                        <div class="review-date">2024-01-10</div>
+                                    </div>
+                                    <div class="review-content">
+                                        昆仑玻璃确实很结实，不小心摔了几次都没事，很满意！
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页面尾部开始 -->
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <!-- 第一块 -->
+                <div class="footer-server">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="img/footer-1.svg" alt="">
+                                百强企业 品质保证
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/footer-2.svg" alt="">
+                                7天退货 15天换货
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/footer-3.svg" alt="">
+                                48元起免运费
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/footer-4.svg" alt="">
+                                官方售后 全国联保
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <!-- 第二块 -->
+                <div class="footer-links">
+                    <!-- 左侧文字 -->
+                    <ul>
+                        <li>购买指南</li>
+                        <li><a href="#">享0分期利息</a></li>
+                        <li><a href="#">以旧换新</a></li>
+                        <li><a href="#">众测活动</a></li>
+                        <li><a href="#">企业购</a></li>
+                        <li><a href="#">O2O采购</a></li>
+                        <li><a href="#">教育优惠</a></li>
+                    </ul>
+                    <ul>
+                        <li>售后服务</li>
+                        <li><a href="#">门店装修</a></li>
+                        <li><a href="#">保修政策</a></li>
+                        <li><a href="#">防伪查询</a></li>
+                        <li><a href="#">退换货政策</a></li>
+                        <li><a href="#">手机寄修服务</a></li>
+                    </ul>
+                    <ul>
+                        <li>服务支持</li>
+                        <li><a href="#">服务店查询</a></li>
+                        <li><a href="#">装修备件价格</a></li>
+                        <li><a href="#">维修服务</a></li>
+                        <li><a href="#">上门安装</a></li>
+                        <li><a href="#">问题排查</a></li>
+                    </ul>
+                    <ul>
+                        <li>特色服务</li>
+                        <li><a href="#">防伪查询</a></li>
+                        <li><a href="#">补购保障</a></li>
+                        <li><a href="#">以旧换新</a></li>
+                    </ul>
+                    <ul>
+                        <li>关于我们</li>
+                        <li><a href="#">公司介绍</a></li>
+                        <li><a href="#">华为零售店</a></li>
+                        <li><a href="#">商家中心</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                        <li><a href="#">规则中心</a></li>
+                    </ul>
+                    <ul>
+                        <li>友情链接</li>
+                        <li><a href="#">华为集团</a></li>
+                        <li><a href="#">华为消费者业务</a></li>
+                        <li><a href="#">华为云</a></li>
+                        <li><a href="#">华为应用市场</a></li>
+                        <li><a href="#">华为心声社区</a></li>
+                    </ul>
+                    <!-- 右侧图文   联系 -->
+                    <div class="contact">
+                        <p class="tel">950805</p>
+                        <p class="time">7 x 24 小时客服热线 (仅收市话费)</p>
+                        <div class="Rounded-corners">
+                            <a href="#">
+                                <i class="iconfont icon-rengongkefu">在线客服</i>
+                            </a>
+                        </div>
+                        <div class="concern-VMALL">
+                            <p class="concern">
+                            关注VMALL:&nbsp;
+                            <a href="#">
+                                <i class="iconfont icon-weixin">&nbsp;</i>
+                                <img class="wx-img" src="img/客服二维码.webp" alt="">
+                            </a>
+                            <a href="#">
+                                <i class="iconfont icon-toutiao">&nbsp;</i>
+                            </a>
+                            <a href="#">
+                                <i class="iconfont icon-weibo">&nbsp;</i>
+                            </a>
+                            <a href="#">
+                                <i class="iconfont icon-baidu"></i>
+                            </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 第三块 -->
+                <div class="footer-info">
+                    <div class="info">
+                        <img src="img/logo_app.png" alt="">
+                        <div class="info-fl">
+                            <!-- 第一块 黑色字 -->
+                            <p>
+                                <a href="#">
+                                    <span>华为集团</span>
+                                </a>
+                                <a href="#">
+                                    <span>消费者业务网站</span>
+                                </a>
+                                <a href="#">
+                                    <span>华为应用市场</span>
+                                </a>
+                                <a href="#">
+                                    <span>HarmonyOS</span>
+                                </a>
+                                <a href="#">
+                                    <span>华为终端云空间</span>
+                                </a>
+                                <a href="#">
+                                    <span>开发者联盟</span>
+                                </a>
+                                <a href="#">
+                                    <span>华为商城手机版</span>
+                                </a>
+                            </p>
+                            <!-- 第二块 灰色文字 -->
+                            <p>
+                                <a href="#">
+                                    <span>隐私声明</span>
+                                </a>
+                                <a href="#">
+                                    <span>服务协议</span>
+                                </a>
+                                <a href="#">
+                                    <span>COOKIES</span>
+                                </a>
+                                Copyright © 2012-2024 华为终端有限公司 版权所有
+                                <a href="#">
+                                    <span>经营资质</span>
+                                </a>
+                                <a href="#">
+                                    <span>粤ICP备19015064号</span>
+                                </a>
+                                <a href="#">
+                                    <span>粤公网安备 44190002003939号</span>
+                                </a>
+                                <br>
+                                <a href="#">
+                                    <span>增值电信业务经营许可证：粤B2-20190762</span>
+                                </a>
+                                <a href="#">
+                                    <span>备案主体编号：44201919072182</span>
+                                </a>
+                                <a href="#">
+                                    <span>粤新出网备（2021）2号</span>
+                                </a>
+                                <a href="#">
+                                    <span>（粤）网械平台备字[2022]第00005号</span>
+                                </a>
+                                <br>
+                                <a href="#">
+                                    <span>互联网药品信息服务资格证（粤）-非经营性-2020-0102</span>
+                                </a>
+                                <a href="#">
+                                    <span>广东省网络食品交易第三方平台备案：GDWS10168</span>
+                                </a>
+                                <a href="#">
+                                    <span>APP备案号: 粤ICP备19015064号-39A号</span>
+                                </a>
+                                <br>
+                                <a href="#">
+                                    <span>网信算备441901536982702230011号</span>
+                                </a>
+                                <a href="#">
+                                    <span>网信算备441901536982704230013号</span>
+                                </a>
+                                <br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/product-detail.js"></script>
+</body>
+</html> 

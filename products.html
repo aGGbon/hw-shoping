@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品列表 - 华为商城</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/products.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+</head>
+<body>
+    <!--顶部  -->
+    <header>
+        <div class="header">
+            <!-- 顶部黑色部分 -->
+            <div class="header-top">
+                <!-- 左侧部分 -->
+                <div class="ht-left">
+                    <a href="index.html">首页</a>
+                    <a href="#">消费者业务网站</a>
+                    <a href="#">优购码</a>
+                    <a href="#">企业商用</a>
+                    <a href="#">Select Region</a>
+                    <a href="#">更多精彩</a>
+                </div>
+                <!-- 右侧部分 -->
+                <div class="ht-right">
+                    <a href="login.html" target="_blank">请登录</a>
+                    <a href="logon.html" target="_blank">注册</a>
+                    <a href="#">我的订单</a>
+                    <a href="#">联系客服</a>
+                    <a href="#">网站导航</a>
+                    <a href="#">手机版</a>
+                    <a href="cart.html">购物车</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 下面菜单栏 -->
+    <div class="header-menu">
+        <div class="logo">
+            <img src="img/logo_app.svg" alt="">
+        </div>
+        <div class="header-menu-list">
+            <a href="#">华为</a>
+            <a href="#">鸿蒙智行</a>
+            <a href="#">华为智选</a>
+            <a href="#">生态周边</a>
+        </div>
+        
+        <!-- 搜索框 -->
+        <div class="searchBar">
+            <div class="icon">
+                <i class="iconfont icon-sousuokuang-sousuo"></i>
+            </div>
+            <div class="textInput">
+                <input type="text" placeholder="搜索商品">
+                <input type="submit" value="go" id="go">
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- 面包屑导航 -->
+        <div class="breadcrumb">
+            <div class="container">
+                <a href="index.html">首页</a> > 
+                <span id="category-name">产品列表</span>
+            </div>
+        </div>
+
+        <!-- 产品列表容器 -->
+        <div class="products-container">
+            <div class="container">
+                <!-- 筛选和排序 -->
+                <div class="filter-bar">
+                    <div class="filter-left">
+                        <div class="filter-group">
+                            <span class="filter-label">分类：</span>
+                            <div class="filter-options">
+                                <span class="filter-option active" data-category="all">全部</span>
+                                <span class="filter-option" data-category="phone">手机</span>
+                                <span class="filter-option" data-category="tablet">平板</span>
+                                <span class="filter-option" data-category="computer">电脑</span>
+                                <span class="filter-option" data-category="wearable">穿戴</span>
+                                <span class="filter-option" data-category="audio">音频</span>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-group">
+                            <span class="filter-label">价格：</span>
+                            <div class="filter-options">
+                                <span class="filter-option active" data-price="all">全部</span>
+                                <span class="filter-option" data-price="0-1000">1000元以下</span>
+                                <span class="filter-option" data-price="1000-3000">1000-3000元</span>
+                                <span class="filter-option" data-price="3000-5000">3000-5000元</span>
+                                <span class="filter-option" data-price="5000-8000">5000-8000元</span>
+                                <span class="filter-option" data-price="8000+">8000元以上</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-right">
+                        <div class="sort-group">
+                            <span class="sort-label">排序：</span>
+                            <select class="sort-select" id="sort-select">
+                                <option value="default">默认排序</option>
+                                <option value="price-asc">价格从低到高</option>
+                                <option value="price-desc">价格从高到低</option>
+                                <option value="sales">销量优先</option>
+                                <option value="new">最新上架</option>
+                            </select>
+                        </div>
+                        
+                        <div class="view-toggle">
+                            <button class="view-btn active" data-view="grid">
+                                <i class="iconfont icon-grid"></i>
+                            </button>
+                            <button class="view-btn" data-view="list">
+                                <i class="iconfont icon-list"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 产品列表 -->
+                <div class="products-grid" id="products-grid">
+                    <!-- 产品项 -->
+                    <div class="product-item" data-category="phone" data-price="5000">
+                        <div class="product-image">
+                            <img src="img/1-PURA.png" alt="HUAWEI Pura 70">
+                            <div class="product-overlay">
+                                <button class="btn-quick-view">快速查看</button>
+                                <button class="btn-add-cart">加入购物车</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>HUAWEI Pura 70</h3>
+                            <p class="product-desc">超高速风驰闪拍 | 第二代昆仑玻璃</p>
+                            <div class="product-price">
+                                <span class="current-price">￥4999</span>
+                                <span class="original-price">￥5999</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-detail">查看详情</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-category="phone" data-price="6000">
+                        <div class="product-image">
+                            <img src="img/1-MATE.png" alt="HUAWEI Mate 60">
+                            <div class="product-overlay">
+                                <button class="btn-quick-view">快速查看</button>
+                                <button class="btn-add-cart">加入购物车</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>HUAWEI Mate 60</h3>
+                            <p class="product-desc">卫星通信 | 昆仑玻璃 | 超长续航</p>
+                            <div class="product-price">
+                                <span class="current-price">￥5999</span>
+                                <span class="original-price">￥6999</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-detail">查看详情</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-category="phone" data-price="8000">
+                        <div class="product-image">
+                            <img src="img/1-POCKET.png" alt="HUAWEI Pocket 2">
+                            <div class="product-overlay">
+                                <button class="btn-quick-view">快速查看</button>
+                                <button class="btn-add-cart">加入购物车</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>HUAWEI Pocket 2</h3>
+                            <p class="product-desc">折叠屏 | 轻薄设计 | 时尚外观</p>
+                            <div class="product-price">
+                                <span class="current-price">￥7999</span>
+                                <span class="original-price">￥8999</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-detail">查看详情</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-category="tablet" data-price="4000">
+                        <div class="product-image">
+                            <img src="img/MatePad Pro 系列.webp" alt="HUAWEI MatePad Pro">
+                            <div class="product-overlay">
+                                <button class="btn-quick-view">快速查看</button>
+                                <button class="btn-add-cart">加入购物车</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>HUAWEI MatePad Pro</h3>
+                            <p class="product-desc">鸿蒙系统 | 手写笔 | 办公利器</p>
+                            <div class="product-price">
+                                <span class="current-price">￥3999</span>
+                                <span class="original-price">￥4999</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-detail">查看详情</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-category="computer" data-price="7000">
+                        <div class="product-image">
+                            <img src="img/MateBook 数字s系列.jpg" alt="HUAWEI MateBook 14s">
+                            <div class="product-overlay">
+                                <button class="btn-quick-view">快速查看</button>
+                                <button class="btn-add-cart">加入购物车</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>HUAWEI MateBook 14s</h3>
+                            <p class="product-desc">2.5K触控屏 | 第13代酷睿 | 轻薄设计</p>
+                            <div class="product-price">
+                                <span class="current-price">￥6999</span>
+                                <span class="original-price">￥7999</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-detail">查看详情</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-category="wearable" data-price="1600">
+                        <div class="product-image">
+                            <img src="img/WATCH 系列.webp" alt="HUAWEI WATCH GT 5">
+                            <div class="product-overlay">
+                                <button class="btn-quick-view">快速查看</button>
+                                <button class="btn-add-cart">加入购物车</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>HUAWEI WATCH GT 5</h3>
+                            <p class="product-desc">玄玑感知系统 | 全新跑骑体验</p>
+                            <div class="product-price">
+                                <span class="current-price">￥1588</span>
+                                <span class="original-price">￥1788</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-detail">查看详情</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-category="wearable" data-price="300">
+                        <div class="product-image">
+                            <img src="img/华为手环8.png" alt="HUAWEI 手环 8">
+                            <div class="product-overlay">
+                                <button class="btn-quick-view">快速查看</button>
+                                <button class="btn-add-cart">加入购物车</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>HUAWEI 手环 8</h3>
+                            <p class="product-desc">轻薄设计 | 14天续航 | 健康监测</p>
+                            <div class="product-price">
+                                <span class="current-price">￥299</span>
+                                <span class="original-price">￥399</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-detail">查看详情</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-item" data-category="audio" data-price="1500">
+                        <div class="product-image">
+                            <img src="img/FreeBuds Pro系列.webp" alt="HUAWEI FreeBuds Pro">
+                            <div class="product-overlay">
+                                <button class="btn-quick-view">快速查看</button>
+                                <button class="btn-add-cart">加入购物车</button>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3>HUAWEI FreeBuds Pro</h3>
+                            <p class="product-desc">主动降噪 | 无线充电 | 长续航</p>
+                            <div class="product-price">
+                                <span class="current-price">￥1499</span>
+                                <span class="original-price">￥1699</span>
+                            </div>
+                            <div class="product-actions">
+                                <button class="btn-detail">查看详情</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 分页 -->
+                <div class="pagination">
+                    <button class="page-btn prev" disabled>上一页</button>
+                    <div class="page-numbers">
+                        <span class="page-number active">1</span>
+                        <span class="page-number">2</span>
+                        <span class="page-number">3</span>
+                        <span class="page-dots">...</span>
+                        <span class="page-number">10</span>
+                    </div>
+                    <button class="page-btn next">下一页</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页面尾部开始 -->
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <!-- 第一块 -->
+                <div class="footer-server">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="img/footer-1.svg" alt="">
+                                百强企业 品质保证
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/footer-2.svg" alt="">
+                                7天退货 15天换货
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/footer-3.svg" alt="">
+                                48元起免运费
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/footer-4.svg" alt="">
+                                官方售后 全国联保
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <!-- 第二块 -->
+                <div class="footer-links">
+                    <!-- 左侧文字 -->
+                    <ul>
+                        <li>购买指南</li>
+                        <li><a href="#">享0分期利息</a></li>
+                        <li><a href="#">以旧换新</a></li>
+                        <li><a href="#">众测活动</a></li>
+                        <li><a href="#">企业购</a></li>
+                        <li><a href="#">O2O采购</a></li>
+                        <li><a href="#">教育优惠</a></li>
+                    </ul>
+                    <ul>
+                        <li>售后服务</li>
+                        <li><a href="#">门店装修</a></li>
+                        <li><a href="#">保修政策</a></li>
+                        <li><a href="#">防伪查询</a></li>
+                        <li><a href="#">退换货政策</a></li>
+                        <li><a href="#">手机寄修服务</a></li>
+                    </ul>
+                    <ul>
+                        <li>服务支持</li>
+                        <li><a href="#">服务店查询</a></li>
+                        <li><a href="#">装修备件价格</a></li>
+                        <li><a href="#">维修服务</a></li>
+                        <li><a href="#">上门安装</a></li>
+                        <li><a href="#">问题排查</a></li>
+                    </ul>
+                    <ul>
+                        <li>特色服务</li>
+                        <li><a href="#">防伪查询</a></li>
+                        <li><a href="#">补购保障</a></li>
+                        <li><a href="#">以旧换新</a></li>
+                    </ul>
+                    <ul>
+                        <li>关于我们</li>
+                        <li><a href="#">公司介绍</a></li>
+                        <li><a href="#">华为零售店</a></li>
+                        <li><a href="#">商家中心</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                        <li><a href="#">规则中心</a></li>
+                    </ul>
+                    <ul>
+                        <li>友情链接</li>
+                        <li><a href="#">华为集团</a></li>
+                        <li><a href="#">华为消费者业务</a></li>
+                        <li><a href="#">华为云</a></li>
+                        <li><a href="#">华为应用市场</a></li>
+                        <li><a href="#">华为心声社区</a></li>
+                    </ul>
+                    <!-- 右侧图文   联系 -->
+                    <div class="contact">
+                        <p class="tel">950805</p>
+                        <p class="time">7 x 24 小时客服热线 (仅收市话费)</p>
+                        <div class="Rounded-corners">
+                            <a href="#">
+                                <i class="iconfont icon-rengongkefu">在线客服</i>
+                            </a>
+                        </div>
+                        <div class="concern-VMALL">
+                            <p class="concern">
+                            关注VMALL:&nbsp;
+                            <a href="#">
+                                <i class="iconfont icon-weixin">&nbsp;</i>
+                                <img class="wx-img" src="img/客服二维码.webp" alt="">
+                            </a>
+                            <a href="#">
+                                <i class="iconfont icon-toutiao">&nbsp;</i>
+                            </a>
+                            <a href="#">
+                                <i class="iconfont icon-weibo">&nbsp;</i>
+                            </a>
+                            <a href="#">
+                                <i class="iconfont icon-baidu"></i>
+                            </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 第三块 -->
+                <div class="footer-info">
+                    <div class="info">
+                        <img src="img/logo_app.png" alt="">
+                        <div class="info-fl">
+                            <!-- 第一块 黑色字 -->
+                            <p>
+                                <a href="#">
+                                    <span>华为集团</span>
+                                </a>
+                                <a href="#">
+                                    <span>消费者业务网站</span>
+                                </a>
+                                <a href="#">
+                                    <span>华为应用市场</span>
+                                </a>
+                                <a href="#">
+                                    <span>HarmonyOS</span>
+                                </a>
+                                <a href="#">
+                                    <span>华为终端云空间</span>
+                                </a>
+                                <a href="#">
+                                    <span>开发者联盟</span>
+                                </a>
+                                <a href="#">
+                                    <span>华为商城手机版</span>
+                                </a>
+                            </p>
+                            <!-- 第二块 灰色文字 -->
+                            <p>
+                                <a href="#">
+                                    <span>隐私声明</span>
+                                </a>
+                                <a href="#">
+                                    <span>服务协议</span>
+                                </a>
+                                <a href="#">
+                                    <span>COOKIES</span>
+                                </a>
+                                Copyright © 2012-2024 华为终端有限公司 版权所有
+                                <a href="#">
+                                    <span>经营资质</span>
+                                </a>
+                                <a href="#">
+                                    <span>粤ICP备19015064号</span>
+                                </a>
+                                <a href="#">
+                                    <span>粤公网安备 44190002003939号</span>
+                                </a>
+                                <br>
+                                <a href="#">
+                                    <span>增值电信业务经营许可证：粤B2-20190762</span>
+                                </a>
+                                <a href="#">
+                                    <span>备案主体编号：44201919072182</span>
+                                </a>
+                                <a href="#">
+                                    <span>粤新出网备（2021）2号</span>
+                                </a>
+                                <a href="#">
+                                    <span>（粤）网械平台备字[2022]第00005号</span>
+                                </a>
+                                <br>
+                                <a href="#">
+                                    <span>互联网药品信息服务资格证（粤）-非经营性-2020-0102</span>
+                                </a>
+                                <a href="#">
+                                    <span>广东省网络食品交易第三方平台备案：GDWS10168</span>
+                                </a>
+                                <a href="#">
+                                    <span>APP备案号: 粤ICP备19015064号-39A号</span>
+                                </a>
+                                <br>
+                                <a href="#">
+                                    <span>网信算备441901536982702230011号</span>
+                                </a>
+                                <a href="#">
+                                    <span>网信算备441901536982704230013号</span>
+                                </a>
+                                <br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+</body>
+</html> 

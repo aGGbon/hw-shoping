@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>结算 - 华为商城</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/checkout.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+</head>
+<body>
+    <!--顶部  -->
+    <header>
+        <div class="header">
+            <!-- 顶部黑色部分 -->
+            <div class="header-top">
+                <!-- 左侧部分 -->
+                <div class="ht-left">
+                    <a href="index.html">首页</a>
+                    <a href="#">消费者业务网站</a>
+                    <a href="#">优购码</a>
+                    <a href="#">企业商用</a>
+                    <a href="#">Select Region</a>
+                    <a href="#">更多精彩</a>
+                </div>
+                <!-- 右侧部分 -->
+                <div class="ht-right">
+                    <a href="login.html" target="_blank">请登录</a>
+                    <a href="logon.html" target="_blank">注册</a>
+                    <a href="#">我的订单</a>
+                    <a href="#">联系客服</a>
+                    <a href="#">网站导航</a>
+                    <a href="#">手机版</a>
+                    <a href="cart.html">购物车</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 下面菜单栏 -->
+    <div class="header-menu">
+        <div class="logo">
+            <img src="img/logo_app.svg" alt="">
+        </div>
+        <div class="header-menu-list">
+            <a href="#">华为</a>
+            <a href="#">鸿蒙智行</a>
+            <a href="#">华为智选</a>
+            <a href="#">生态周边</a>
+        </div>
+        
+        <!-- 搜索框 -->
+        <div class="searchBar">
+            <div class="icon">
+                <i class="iconfont icon-sousuokuang-sousuo"></i>
+            </div>
+            <div class="textInput">
+                <input type="text" placeholder="搜索商品">
+                <input type="submit" value="go" id="go">
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- 面包屑导航 -->
+        <div class="breadcrumb">
+            <div class="container">
+                <a href="index.html">首页</a> > 
+                <a href="cart.html">购物车</a> > 
+                <span>结算</span>
+            </div>
+        </div>
+
+        <!-- 结算容器 -->
+        <div class="checkout-container">
+            <div class="container">
+                <h1>订单结算</h1>
+                
+                <!-- 收货地址 -->
+                <div class="checkout-section">
+                    <h2>收货地址</h2>
+                    <div class="address-list">
+                        <div class="address-item active">
+                            <div class="address-info">
+                                <div class="address-header">
+                                    <span class="name">张三</span>
+                                    <span class="phone">138****8888</span>
+                                    <span class="default-tag">默认</span>
+                                </div>
+                                <div class="address-detail">
+                                    广东省深圳市南山区科技园南区科苑路科兴科学园B栋3单元
+                                </div>
+                            </div>
+                            <div class="address-actions">
+                                <button class="btn-edit">编辑</button>
+                                <button class="btn-delete">删除</button>
+                            </div>
+                        </div>
+                        
+                        <div class="address-item">
+                            <div class="address-info">
+                                <div class="address-header">
+                                    <span class="name">李四</span>
+                                    <span class="phone">139****9999</span>
+                                </div>
+                                <div class="address-detail">
+                                    北京市朝阳区建国门外大街1号国贸大厦
+                                </div>
+                            </div>
+                            <div class="address-actions">
+                                <button class="btn-edit">编辑</button>
+                                <button class="btn-delete">删除</button>
+                            </div>
+                        </div>
+                        
+                        <button class="btn-add-address">
+                            <i class="iconfont icon-add"></i>
+                            添加新地址
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 商品清单 -->
+                <div class="checkout-section">
+                    <h2>商品清单</h2>
+                    <div class="order-items">
+                        <div class="order-item">
+                            <div class="item-image">
+                                <img src="img/1-PURA.png" alt="HUAWEI Pura 70">
+                            </div>
+                            <div class="item-info">
+                                <h3>HUAWEI Pura 70</h3>
+                                <p class="item-spec">雅川青 256GB</p>
+                                <p class="item-desc">超高速风驰闪拍 | 第二代昆仑玻璃</p>
+                            </div>
+                            <div class="item-price">
+                                <span class="price">￥4999</span>
+                            </div>
+                            <div class="item-quantity">
+                                <span>×1</span>
+                            </div>
+                            <div class="item-total">
+                                <span class="total">￥4999</span>
+                            </div>
+                        </div>
+                        
+                        <div class="order-item">
+                            <div class="item-image">
+                                <img src="img/WATCH 系列.webp" alt="HUAWEI WATCH GT 5">
+                            </div>
+                            <div class="item-info">
+                                <h3>HUAWEI WATCH GT 5</h3>
+                                <p class="item-spec">曜金黑 46mm</p>
+                                <p class="item-desc">玄玑感知系统 | 全新跑骑体验</p>
+                            </div>
+                            <div class="item-price">
+                                <span class="price">￥1588</span>
+                            </div>
+                            <div class="item-quantity">
+                                <span>×1</span>
+                            </div>
+                            <div class="item-total">
+                                <span class="total">￥1588</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 配送方式 -->
+                <div class="checkout-section">
+                    <h2>配送方式</h2>
+                    <div class="delivery-options">
+                        <div class="delivery-option active">
+                            <input type="radio" name="delivery" value="standard" checked>
+                            <label>
+                                <span class="delivery-name">标准配送</span>
+                                <span class="delivery-desc">3-5个工作日送达</span>
+                                <span class="delivery-fee">免费</span>
+                            </label>
+                        </div>
+                        
+                        <div class="delivery-option">
+                            <input type="radio" name="delivery" value="express">
+                            <label>
+                                <span class="delivery-name">快速配送</span>
+                                <span class="delivery-desc">1-2个工作日送达</span>
+                                <span class="delivery-fee">￥20</span>
+                            </label>
+                        </div>
+                        
+                        <div class="delivery-option">
+                            <input type="radio" name="delivery" value="overnight">
+                            <label>
+                                <span class="delivery-name">隔日达</span>
+                                <span class="delivery-desc">次日送达</span>
+                                <span class="delivery-fee">￥50</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 支付方式 -->
+                <div class="checkout-section">
+                    <h2>支付方式</h2>
+                    <div class="payment-options">
+                        <div class="payment-option active">
+                            <input type="radio" name="payment" value="alipay" checked>
+                            <label>
+                                <i class="iconfont icon-alipay"></i>
+                                <span>支付宝</span>
+                            </label>
+                        </div>
+                        
+                        <div class="payment-option">
+                            <input type="radio" name="payment" value="wechat">
+                            <label>
+                                <i class="iconfont icon-weixin"></i>
+                                <span>微信支付</span>
+                            </label>
+                        </div>
+                        
+                        <div class="payment-option">
+                            <input type="radio" name="payment" value="unionpay">
+                            <label>
+                                <i class="iconfont icon-unionpay"></i>
+                                <span>银联支付</span>
+                            </label>
+                        </div>
+                        
+                        <div class="payment-option">
+                            <input type="radio" name="payment" value="huawei">
+                            <label>
+                                <i class="iconfont icon-huawei"></i>
+                                <span>华为支付</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 优惠券 -->
+                <div class="checkout-section">
+                    <h2>优惠券</h2>
+                    <div class="coupon-section">
+                        <div class="coupon-selector">
+                            <select class="coupon-select">
+                                <option value="">选择优惠券</option>
+                                <option value="newuser">新人专享券 - 满1000减100</option>
+                                <option value="discount">全场9折券</option>
+                                <option value="free-shipping">包邮券</option>
+                            </select>
+                        </div>
+                        <div class="coupon-info">
+                            <span class="coupon-save">预计节省：￥0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 订单汇总 -->
+                <div class="checkout-summary">
+                    <div class="summary-item">
+                        <span>商品总价：</span>
+                        <span class="summary-price">￥6587</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>运费：</span>
+                        <span class="summary-price">￥0</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>优惠券：</span>
+                        <span class="summary-price">-￥0</span>
+                    </div>
+                    <div class="summary-item total">
+                        <span>应付总额：</span>
+                        <span class="summary-price">￥6587</span>
+                    </div>
+                </div>
+
+                <!-- 提交订单 -->
+                <div class="checkout-actions">
+                    <button class="btn-submit" id="submit-order">
+                        提交订单
+                    </button>
+                    <a href="cart.html" class="btn-back">返回购物车</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页面尾部开始 -->
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <!-- 第一块 -->
+                <div class="footer-server">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img src="img/footer-1.svg" alt="">
+                                百强企业 品质保证
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/footer-2.svg" alt="">
+                                7天退货 15天换货
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/footer-3.svg" alt="">
+                                48元起免运费
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img src="img/footer-4.svg" alt="">
+                                官方售后 全国联保
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+    
+                <!-- 第二块 -->
+                <div class="footer-links">
+                    <!-- 左侧文字 -->
+                    <ul>
+                        <li>购买指南</li>
+                        <li><a href="#">享0分期利息</a></li>
+                        <li><a href="#">以旧换新</a></li>
+                        <li><a href="#">众测活动</a></li>
+                        <li><a href="#">企业购</a></li>
+                        <li><a href="#">O2O采购</a></li>
+                        <li><a href="#">教育优惠</a></li>
+                    </ul>
+                    <ul>
+                        <li>售后服务</li>
+                        <li><a href="#">门店装修</a></li>
+                        <li><a href="#">保修政策</a></li>
+                        <li><a href="#">防伪查询</a></li>
+                        <li><a href="#">退换货政策</a></li>
+                        <li><a href="#">手机寄修服务</a></li>
+                    </ul>
+                    <ul>
+                        <li>服务支持</li>
+                        <li><a href="#">服务店查询</a></li>
+                        <li><a href="#">装修备件价格</a></li>
+                        <li><a href="#">维修服务</a></li>
+                        <li><a href="#">上门安装</a></li>
+                        <li><a href="#">问题排查</a></li>
+                    </ul>
+                    <ul>
+                        <li>特色服务</li>
+                        <li><a href="#">防伪查询</a></li>
+                        <li><a href="#">补购保障</a></li>
+                        <li><a href="#">以旧换新</a></li>
+                    </ul>
+                    <ul>
+                        <li>关于我们</li>
+                        <li><a href="#">公司介绍</a></li>
+                        <li><a href="#">华为零售店</a></li>
+                        <li><a href="#">商家中心</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                        <li><a href="#">规则中心</a></li>
+                    </ul>
+                    <ul>
+                        <li>友情链接</li>
+                        <li><a href="#">华为集团</a></li>
+                        <li><a href="#">华为消费者业务</a></li>
+                        <li><a href="#">华为云</a></li>
+                        <li><a href="#">华为应用市场</a></li>
+                        <li><a href="#">华为心声社区</a></li>
+                    </ul>
+                    <!-- 右侧图文   联系 -->
+                    <div class="contact">
+                        <p class="tel">950805</p>
+                        <p class="time">7 x 24 小时客服热线 (仅收市话费)</p>
+                        <div class="Rounded-corners">
+                            <a href="#">
+                                <i class="iconfont icon-rengongkefu">在线客服</i>
+                            </a>
+                        </div>
+                        <div class="concern-VMALL">
+                            <p class="concern">
+                            关注VMALL:&nbsp;
+                            <a href="#">
+                                <i class="iconfont icon-weixin">&nbsp;</i>
+                                <img class="wx-img" src="img/客服二维码.webp" alt="">
+                            </a>
+                            <a href="#">
+                                <i class="iconfont icon-toutiao">&nbsp;</i>
+                            </a>
+                            <a href="#">
+                                <i class="iconfont icon-weibo">&nbsp;</i>
+                            </a>
+                            <a href="#">
+                                <i class="iconfont icon-baidu"></i>
+                            </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 第三块 -->
+                <div class="footer-info">
+                    <div class="info">
+                        <img src="img/logo_app.png" alt="">
+                        <div class="info-fl">
+                            <!-- 第一块 黑色字 -->
+                            <p>
+                                <a href="#">
+                                    <span>华为集团</span>
+                                </a>
+                                <a href="#">
+                                    <span>消费者业务网站</span>
+                                </a>
+                                <a href="#">
+                                    <span>华为应用市场</span>
+                                </a>
+                                <a href="#">
+                                    <span>HarmonyOS</span>
+                                </a>
+                                <a href="#">
+                                    <span>华为终端云空间</span>
+                                </a>
+                                <a href="#">
+                                    <span>开发者联盟</span>
+                                </a>
+                                <a href="#">
+                                    <span>华为商城手机版</span>
+                                </a>
+                            </p>
+                            <!-- 第二块 灰色文字 -->
+                            <p>
+                                <a href="#">
+                                    <span>隐私声明</span>
+                                </a>
+                                <a href="#">
+                                    <span>服务协议</span>
+                                </a>
+                                <a href="#">
+                                    <span>COOKIES</span>
+                                </a>
+                                Copyright © 2012-2024 华为终端有限公司 版权所有
+                                <a href="#">
+                                    <span>经营资质</span>
+                                </a>
+                                <a href="#">
+                                    <span>粤ICP备19015064号</span>
+                                </a>
+                                <a href="#">
+                                    <span>粤公网安备 44190002003939号</span>
+                                </a>
+                                <br>
+                                <a href="#">
+                                    <span>增值电信业务经营许可证：粤B2-20190762</span>
+                                </a>
+                                <a href="#">
+                                    <span>备案主体编号：44201919072182</span>
+                                </a>
+                                <a href="#">
+                                    <span>粤新出网备（2021）2号</span>
+                                </a>
+                                <a href="#">
+                                    <span>（粤）网械平台备字[2022]第00005号</span>
+                                </a>
+                                <br>
+                                <a href="#">
+                                    <span>互联网药品信息服务资格证（粤）-非经营性-2020-0102</span>
+                                </a>
+                                <a href="#">
+                                    <span>广东省网络食品交易第三方平台备案：GDWS10168</span>
+                                </a>
+                                <a href="#">
+                                    <span>APP备案号: 粤ICP备19015064号-39A号</span>
+                                </a>
+                                <br>
+                                <a href="#">
+                                    <span>网信算备441901536982702230011号</span>
+                                </a>
+                                <a href="#">
+                                    <span>网信算备441901536982704230013号</span>
+                                </a>
+                                <br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/checkout.js"></script>
+</body>
+</html> 

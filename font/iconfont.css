@@ -1,0 +1,67 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 4750268 */
+  src: url('iconfont.woff2?t=1733971627273') format('woff2'),
+       url('iconfont.woff?t=1733971627273') format('woff'),
+       url('iconfont.ttf?t=1733971627273') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-tubiao_fanhuidingbu:before {
+  content: "\e613";
+}
+
+.icon-iconfontzhizuobiaozhun45:before {
+  content: "\e62c";
+}
+
+.icon-zhuyi:before {
+  content: "\e61b";
+}
+
+.icon-wo:before {
+  content: "\e603";
+}
+
+.icon-sousuokuang-sousuo:before {
+  content: "\e67c";
+}
+
+.icon-gouwuche:before {
+  content: "\e634";
+}
+
+.icon-zhifubaozhifu:before {
+  content: "\e612";
+}
+
+.icon-QQ-circle-fill:before {
+  content: "\e887";
+}
+
+.icon-rengongkefu:before {
+  content: "\e602";
+}
+
+.icon-weibo:before {
+  content: "\e63e";
+}
+
+.icon-weixin:before {
+  content: "\e600";
+}
+
+.icon-baidu:before {
+  content: "\e8cb";
+}
+
+.icon-toutiao:before {
+  content: "\e601";
+}
+

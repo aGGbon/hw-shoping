@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="CSS/logon.css">
+    <link rel="stylesheet" href="font/iconfont.css">
+
+</head>
+<body>
+    <!-- 第一部分 最上面 -->
+    <div class="header">
+        <div class="container">
+            <img src="img/HUAWEI.svg" alt="">
+        </div>
+    </div>
+
+
+    <!-- 内容部分 -->
+    <!-- 登录部分大盒子  -->
+    <div class="register">
+        <!-- 左侧部分 -->
+        <div class="register-left">
+            <!-- Tab 切换按钮 -->
+            <button class="left-top tab-button" data-target="phone-register">手机号注册</button>
+            <button class="left-bottom tab-button" data-target="email-register">邮件注册</button>
+        </div>
+
+        <!-- 右侧部分第一个 --手机号注册 -->
+        <div class="register-right" id="phone-register" class="active">
+            <!-- 上面大字 -->
+            <div class="right-top">
+                <span class="test-1">
+                    华为账号注册
+                </span>
+                <span class="test-2">
+                    已有账号，
+                    <a href="#">
+                        去登录！
+                    </a>
+                </span>
+            </div>
+
+            <!-- 表单内容 -->
+            <div class="right-bottom">
+                <form action="" class="form-container">
+                    <input class="form-text" type="text" placeholder="国家地区">
+                    <input class="form-text" type="text" placeholder="手机号">
+                    <div class="item">
+                        <input class="form-text2" type="text" placeholder="短信验证码">
+                        <a href="#">获取验证码</a>
+                    </div>
+                    <input class="pwd" type="password" placeholder="密码">
+                    <input class="pwd" type="password" placeholder="确认密码">
+                    <input class="day" type="date">
+                    <div class="button-1">
+                        <button >注册</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+        <!-- 第二个表单内容 --- 邮件地址注册 -->
+        <div class="register-right" id="email-register">
+            <!-- 上面大字 -->
+            <div class="right-top">
+                <span class="test-1">
+                    华为账号注册
+                </span>
+                <span class="test-2">
+                    已有账号，
+                    <a href="#">
+                        去登录！
+                    </a>
+                </span>
+            </div>
+            <!-- 表单内容 -->
+            <div class="right-bottom">
+                <form action="" class="form-container">
+                    <input class="form-text" type="text" placeholder="国家地区">
+                    <input class="form-text" type="text" placeholder="邮件地址">
+                    <div class="item">
+                        <input class="form-text2" type="text" placeholder="邮件验证码">
+                        <a href="#">获取验证码</a>
+                    </div>
+                    <input class="pwd" type="password" placeholder="密码">
+                    <input class="pwd" type="password" placeholder="确认密码">
+                    <input class="day" type="date">
+                    <div class="button-1">
+                        <button >注册</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 最底部 -->
+    <div class="footer">
+        <!-- 两行的小盒子 -->
+        <div class="small-center">
+
+            <!-- 上面一行 -->
+            <div class="container-top">
+                <p>
+                    <a href="#">
+                        华为账号用户协议
+                    </a>
+                    <em>|</em>
+                    <a href="#">
+                        关于华为账号与隐私的声明
+                    </a>
+                    <em>|</em>
+                    <a href="#">
+                        常见问题
+                    </a>
+                    <em>|</em>
+                    <a href="#">
+                        Cookies
+                    </a>
+                </p>
+            </div>
+
+            <!-- 下面一行 -->
+            <div class="container-bottom">
+                <p>华为账号 版权所有 © 2011-2024</p>
+            </div>
+            
+
+        </div>
+
+
+
+    <script src="js/logon.js"></script>
+
+
+</body>
+</html>
